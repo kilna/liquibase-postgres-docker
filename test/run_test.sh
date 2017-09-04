@@ -1,7 +1,6 @@
 #!/bin/bash
 
 set -e -o pipefail
-cd /workspace/test
 
 export postgres_version=9.6.4
 export LANG=en_US.utf8

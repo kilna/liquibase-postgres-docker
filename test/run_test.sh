@@ -29,7 +29,7 @@ echo "Starting postgres"
 sudo -u postgres pg_ctl -D "${PGDATA}" start
 
 echo "Applying changelog"
-liquibase updateTestingRollback
+liquibase --changeLogFile=/opt/test/changelog.xml updateTestingRollback
 
 echo "Stopping postgres"
 sudo -u postgres pg_ctl -D "${PGDATA}" stop

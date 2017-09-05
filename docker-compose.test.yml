@@ -1,5 +1,8 @@
-sut:
-  build: .
-  working_dir: /opt/liquibase_test
-  command: ./run_test.sh
+version: '3'
+services:
+  sut:
+    build: .
+    command: /opt/test/run_test.sh
+    environment:
+      LIQUIBASE_HOST: localhost
 

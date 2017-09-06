@@ -1,4 +1,5 @@
 FROM kilna/liquibase
+LABEL maintainer="Kilna kilna@kilna.com"
 
 ARG postgres_jdbc_version=42.1.4
 ARG postgres_jdbc_download_url=https://jdbc.postgresql.org/download

@@ -9,12 +9,11 @@ ENV LIQUIBASE_PORT=${LIQUIBASE_PORT:-5432}\
     LIQUIBASE_DRIVER=${LIQUIBASE_DRIVER:-org.postgresql.Driver}\
     LIQUIBASE_URL=${LIQUIBASE_URL:-'jdbc:postgresql://${HOST}:${PORT}/${DATABASE}'}
 
-COPY test/ /opt/test/
+COPY test/ /opt/test_liquibase_postgres/
 RUN set -e -o pipefail;\
-    chmod +x /opt/test/run_test.sh;\
+    chmod +x /opt/test_liquibase_postgres/run_test.sh;\
     cd /opt/jdbc;\
     jarfile=postgresql-${postgres_jdbc_version}.jar;\
     curl -SOLs ${postgres_jdbc_download_url}/${jarfile};\
-    ln -s ${jarfile} postgres-jdbc.jar;\
-    set | grep -F LIQUIBASE_
+    ln -s ${jarfile} postgres-jdbc.jar;
 

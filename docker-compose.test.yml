@@ -2,7 +2,7 @@ version: '3'
 services:
   sut:
     build: .
-    command: /opt/test/run_test.sh
+    command: /opt/test_liquibase_postgres/run_test.sh
     environment:
       LIQUIBASE_HOST: localhost
 

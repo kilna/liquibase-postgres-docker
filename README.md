@@ -5,7 +5,8 @@
 [![](https://img.shields.io/docker/stars/kilna/liquibase-postgres.svg?style=plastic)](https://hub.docker.com/r/kilna/liquibase-postgres/)
 [![](https://img.shields.io/badge/docker_build-automated-blue.svg?style=plastic)](https://cloud.docker.com/swarm/kilna/repository/docker/kilna/liquibase-postgres/builds)
 
-**A lightweight Docker for running [Liquibase](https://www.liquibase.org) with [PostgreSQL](http://www.postgres.org) databases** - DockerHub: [liquibase-postgres](https://hub.docker.com/r/kilna/liquibase-postgres/) - GitHub: [liquibase-postgres-docker](https://github.com/kilna/liquibase-postgres-docker)
+**A lightweight Docker for running [Liquibase](https://www.liquibase.org) with [PostgreSQL](http://www.postgres.org) databases**
+DockerHub: [liquibase-postgres](https://hub.docker.com/r/kilna/liquibase-postgres/) - GitHub: [liquibase-postgres-docker](https://github.com/kilna/liquibase-postgres-docker)
 
 # Usage
 

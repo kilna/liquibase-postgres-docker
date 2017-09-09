@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -e -o pipefail
 
 export postgres_version=9.6.4
@@ -29,7 +28,7 @@ echo "Starting postgres"
 sudo -u postgres pg_ctl -D "${PGDATA}" start
 
 echo "Applying changelog"
-liquibase --changeLogFile=/opt/test/changelog.xml updateTestingRollback
+liquibase --changeLogFile=/opt/test_liquibase_postgres/changelog.xml updateTestingRollback
 
 echo "Stopping postgres"
 sudo -u postgres pg_ctl -D "${PGDATA}" stop

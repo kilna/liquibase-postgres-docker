@@ -1,5 +1,0 @@
-.dockerignore
-Dockerfile
-docker-compose*
-README.md
-LICENSE

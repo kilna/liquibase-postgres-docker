@@ -1,13 +1,11 @@
 #!/bin/bash
 set -e -o pipefail
 
-export postgres_version=9.6.4
 export LANG=en_US.utf8
 export PGDATA=/var/lib/postgresql/data
 
 echo "Adding postgres package"
-echo "@edge http://nl.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
-apk add --no-cache sudo "postgresql@edge<${postgres_version}" "postgresql-contrib@edge<${postgres_version}"
+apk add --no-cache sudo postgresql postgresql-contrib
 
 echo "Preparing postgres"
 mkdir -p "${PGDATA}"

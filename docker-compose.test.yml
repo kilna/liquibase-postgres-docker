@@ -8,6 +8,14 @@ services:
       args:
         jdbc_driver_version: ${jdbc_driver_version}
     command: /opt/test_liquibase_postgres/run_test.sh
-    environment:
-      LIQUIBASE_HOST: localhost
+    depends_on:
+      - db
     image: liquibase-postgres:build
+  db:
+    image: postgres
+    container_name: db
+    environment:
+      POSTGRES_USER: liquibase
+      POSTGRES_PASSWORD: liquibase
+    ports:
+      - 5432:5432

@@ -16,7 +16,7 @@ DockerHub: [liquibase-postgres](https://hub.docker.com/r/kilna/liquibase-postgre
 You can use this image by creating your own `Dockerfile` which inherits using a FROM line:
 
 ```
-FROM kilna/liquibase-postgres-docker
+FROM kilna/liquibase-postgres
 ENV LIQUIBASE_HOST=database.server
 ENV LIQUIBASE_DATABASE=dbname
 ENV LIQUIBASE_USERNAME=user

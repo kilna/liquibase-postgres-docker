@@ -2,7 +2,7 @@ FROM kilna/liquibase
 LABEL maintainer="Kilna kilna@kilna.com"
 
 ARG jdbc_driver_version
-ENV jdbc_driver_version=${jdbc_driver_version:-42.1.4}\
+ENV jdbc_driver_version=${jdbc_driver_version:-42.2.8}\
     jdbc_driver_download_url=https://jdbc.postgresql.org/download\
     LIQUIBASE_PORT=${LIQUIBASE_PORT:-5432}\
     LIQUIBASE_CLASSPATH=${LIQUIBASE_CLASSPATH:-/opt/jdbc/postgres-jdbc.jar}\

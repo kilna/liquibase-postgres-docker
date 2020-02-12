@@ -68,7 +68,7 @@ In order to create the liquibase.properties file, it uses the follow environment
 | LIQUIBASE_LOGLEVEL   | Log level as defined by Liquibase <br> _Valid values: debug, info, warning, severe, off_ | info |
 | LIQUIBASE_CLASSPATH  | JDBC driver filename | /opt/jdbc/postgres-jdbc.jar |
 | LIQUIBASE_DRIVER     | JDBC object path | org.postgresql.Driver |
-| LIQUIBASE_URL        | JDBC URL for connection | jdbc:postgres://${HOST}:${PORT}/${DATABASE} |
+| LIQUIBASE_URL        | JDBC URL for connection | jdbc:postgresql://${HOST}:${PORT}/${DATABASE} |
 | LIQUIBASE_DEBUG      | If set to 'yes', when _docker run_ is executed, will show the values of all LIQUIBASE_* environment variables and describes any substitutions performed on _liquibase.properties_ | _unset_ |
 
 The generated _liquibase.properties_ file is loaded into the default working dir _/workspace_ (which is also shared as a docker volume). The _/workspace/liquibase.properties_ file will have any variables substituted each time a 'docker run' command is performed...  so you can load your own _/workspace/liquibase.properties_ file and put `${HOST}` in it, and it will be replaced with the LIQUIBASE_HOST environment variable.
